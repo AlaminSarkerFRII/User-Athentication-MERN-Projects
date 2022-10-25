@@ -1,4 +1,4 @@
-const  mongoose  = require("mongoose");
+const mongoose = require("mongoose");
 const Workout = require("../model/workoutModel");
 
 // ===== Get all Workout =========>
@@ -40,7 +40,37 @@ const createWorkout = async (req, res) => {
 
 // ======= DELETE a workout ===========>
 
+const deleteWorkout = async (req, res) => {
+  const { id } = req.params;
+  // check id is valid
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: "Not a Valid Id Found" });
+  }
+
+  const workout = await Workout.findOneAndDelete({ _id: id });
+
+  if (!workout) {
+    return res.status(404).json({ error: "No workout finds" });
+  }
+  return res.status(200).json(workout);
+};
+
 //========== Update a workout ========>
+
+const updateWorkout = async (req, res) => {
+  const { id } = req.params;
+  // check id is valid
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: " Data not Found in Workouts" });
+  }
+  const workout = await Workout.findOneAndUpdate({ _id: id },{
+    ...req.body,
+  });
+  if (!workout) {
+    return res.status(404).json({ error: " Data not matched" });
+  }
+  return res.status(200).json(workout);
+};
 
 // export all function
 
@@ -48,4 +78,6 @@ module.exports = {
   createWorkout,
   getAllWorkouts,
   getAWorkout,
+  deleteWorkout,
+  updateWorkout
 };

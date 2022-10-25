@@ -3,6 +3,8 @@ const {
   createWorkout,
   getAllWorkouts,
   getAWorkout,
+  deleteWorkout,
+  updateWorkout,
 } = require("../controllers/workoutController");
 const Workout = require("../model/workoutModel");
 const router = express.Router();
@@ -21,14 +23,10 @@ router.post("/", async (req, res) => createWorkout);
 
 //========== DELETE a workout ===============>
 
-router.delete("/:id", (req, res) => {
-  res.json({ mgs: "DELETE a WORKOUT " });
-});
+router.delete("/:id", deleteWorkout)
 
 //==============UPDATE a WORK OUT ==================>
 
-router.patch("/:id", (req, res) => {
-  res.json({ mgs: "UPDATE  WORKOUT" });
-});
+router.patch("/:id", updateWorkout)
 
 module.exports = router;
