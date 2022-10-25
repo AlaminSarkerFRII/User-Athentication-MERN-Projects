@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Register = () => {
+  const [inputValue, setInputValue] = useState({
+    name: "",
+    email: "",
+    password: "",
+    cpassword: "",
+  });
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    const {name,value} = e.target;
+    setInputValue((previousValue)=>{
+        return { 
+            ...previousValue,
+            [name] : value,
+        }
+    })
+  };
+
   return (
     <div className="main my-20 w-1/2 mx-auto rounded-2xl ">
       <div className="content flex flex-row sm:flex-col justify-center items-center gap-10">
@@ -11,24 +29,28 @@ const Register = () => {
             type="text"
             name="name"
             placeholder="enter your name"
+            onChange={handleChange} value={inputValue.name}
           />
           <input
             className="w-full mb-4 border-emerald-200 border-2 py-2 px-6 outline-none rounded-md "
             type="text"
             name="email"
             placeholder="enter your email"
+            onChange={handleChange} value={inputValue.email}
           />
           <input
             className="w-full mb-4 border-emerald-200 border-2 py-2 px-6 rounded-md outline-none "
             type="password"
             name="password"
             placeholder="enter your password"
+            onChange={handleChange} value={inputValue.password}
           />
           <input
             className="w-full  mb-4 border-emerald-200 border-2 py-2 px-6 rounded-md outline-none "
             type="password"
             name="cpassword"
             placeholder="confirm password"
+            onChange={handleChange} value={inputValue.cpassword}
           />
 
           <input
