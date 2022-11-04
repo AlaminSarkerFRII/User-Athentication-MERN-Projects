@@ -12,9 +12,10 @@ const Navbar = () => {
         <div className="items">
           <ul className="gap-6 flex flex-row justify-between items-center">
             <Link to="/">Home</Link>
-            <Link to="/">About</Link>
-            <Link to="/">Workout</Link>
-            <Link to="/">Blog</Link>
+            <Link to="/about">About</Link>
+            <Link to="/workouts">Workout</Link>
+            <Link to="/blogs">Blog</Link>
+            <Link to="/addWorkout">Add Workout</Link>
           </ul>
         </div>
         <div className="sign-in flex flex-shrink-0 flex-row justify-center items-center gap-4">

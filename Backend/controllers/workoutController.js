@@ -4,6 +4,7 @@ const Workout = require("../model/workoutModel");
 // ===== Get all Workout =========>
 
 const getAllWorkouts = async (req, res) => {
+  // const workouts = await Workout.find({}).sort({ _id: -1 }); // same code (both) sorting with new workout first
   const workouts = await Workout.find({}).sort({ createdAt: -1 }); // sorting with new workout first
   return res.status(200).json(workouts);
 };

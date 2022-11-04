@@ -19,7 +19,7 @@ router.get("/:id", getAWorkout);
 
 //========== POST a new WORKOUT ============>
 
-router.post("/", async (req, res) => createWorkout);
+router.post("/", createWorkout);
 
 //========== DELETE a workout ===============>
 
