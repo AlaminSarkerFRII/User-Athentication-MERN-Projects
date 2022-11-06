@@ -19,8 +19,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="sign-in flex flex-shrink-0 flex-row justify-center items-center gap-4">
-           <button className="border-2 px-4 py-1 rounded-md bg-red-500 hover:bg-teal-500 text-white ">Sign In </button>
-           <button className="border-2 px-4 py-1 rounded-md bg-red-500 hover:bg-teal-500 text-white ">Sign Up </button>
+           <Link to="/login" className="border-2 px-4 py-1 rounded-md bg-red-500 hover:bg-teal-500 text-white ">Sign In </Link>
+           <Link to="/register" className="border-2 px-4 py-1 rounded-md bg-red-500 hover:bg-teal-500 text-white ">Sign Up </Link>
         </div>
       </div>
     </div>

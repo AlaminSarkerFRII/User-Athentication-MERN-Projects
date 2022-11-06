@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was TailwindCSS with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Setup All Routes And Functionality -- That you can use anywhere.
 * Add or Create User .
