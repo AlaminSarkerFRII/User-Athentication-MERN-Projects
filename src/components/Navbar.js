@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import imgsLogo from "../assests/logo.png"
 
+
+
 const Navbar = () => {
   return (
     <div className="navbar-container py-2 shadow-xl mt-0 mb-0">
@@ -16,6 +18,7 @@ const Navbar = () => {
             <Link to="/workouts">Workout</Link>
             <Link to="/blogs">Blog</Link>
             <Link to="/addWorkout">Add Workout</Link>
+            <Link to="/dashboard">Dashboard</Link>
           </ul>
         </div>
         <div className="sign-in flex flex-shrink-0 flex-row justify-center items-center gap-4">

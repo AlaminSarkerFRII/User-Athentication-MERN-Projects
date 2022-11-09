@@ -17,7 +17,7 @@ const DetailsUser = () => {
   console.log(user);
 
   return (
-    <div className="rounded-lg shadow-md w-1/2 mx-auto py-6 my-12 px-4 text-xl font-bold text-purple-500">
+    <div className="border-2 border-solid-gray rounded-lg shadow-md w-1/2 mx-auto py-6 my-12 px-4 text-xl font-bold text-purple-500">
       <h2>{user?.name}</h2>
       <h2>{user?.email}</h2>
       <h2>{user?.createdAt}</h2>

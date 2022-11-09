@@ -61,7 +61,7 @@ const deletedUser = async (req, res) => {
     return res.status(404).json({ error: "User not Find" });
   }
 
-  return res.status(200).json(user, "deleted");
+  return res.status(200).json(user);
 };
 
 //===============update a User ===============>
