@@ -3,8 +3,8 @@ import { TbLetterSpacing } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <div className="footer-main cursor-pointer w-full mx-auto flex justify-center items-center bottom-0 h-60 bg-black text-teal-50">
-      <div className="footer-content gap-20 flex flex-col md:flex-row lg:flex-row justify-between items-center">
+    <div className="footer-main cursor-pointer w-full mx-auto bottom-0 h-60 bg-black text-teal-50">
+      <div className="footer-content gap-20 flex flex-col md:flex-row lg:flex-row justify-center items-center">
         <div className="first-container flex flex-col justify-center items-center">
           <TbLetterSpacing className="text-7xl font-bold" />
           <p className="w-1/2 mx-auto">
@@ -31,6 +31,8 @@ const Footer = () => {
           <li>Social Condition</li>
         </div>
       </div>
+
+      <div className=" w-[95%] mx-auto my-10 border-2 border-x-gray-50"></div>
     </div>
   );
 };
