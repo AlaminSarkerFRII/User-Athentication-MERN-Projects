@@ -11,13 +11,13 @@ const Home = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        setWorkouts(data);
+        setWorkouts(data.slice(0,5));
       });
   }, []);
 
   return (
-    <div className="px-6 justify-center items-center gap-4 my-20">
-      <div className="w-10/12 gap-10 bg-zinc-100 grid grid-cols-3 -z-100 h-screen mx-auto py-3">
+    <div className="my-10 text-center">
+      <div className="flex flex-col lg:flex-row flex-wrap gap-10 sm:w-full justify-center items-center bg-zinc-100 mx-auto py-3">
         {workouts &&
           workouts.map((workout) => (
             <WorkoutDetails key={workout._id} workout={workout} />

@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import UpdateUser from "./components/UpdateUser";
 import DetailsUser from "./components/Dashboard/DetailsUser";
 import Dashboard from "./components/Dashboard/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
         <Route path="/update-user/:id" element={<UpdateUser />}></Route>
         <Route path="/details-user/:id" element={<DetailsUser />}></Route>
       </Routes>
-
-      <ToastContainer />
+      <ToastContainer position="top-center" />
+      <Footer/>
     </>
   );
 }
