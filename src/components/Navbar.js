@@ -14,13 +14,15 @@ const Navbar = () => {
       setInterval(() => {
         setTime(new Date());
       }, 1000);
-      
     })
 
+
+
+
   return (
-    <div className="navbar-container text-center  py-2 shadow-xl mt-0 mb-0">
+    <div className="navbar-container text-center py-2 shadow-xl mt-0 mb-0">
       <div className="text-xl font-bold flex flex-wrap justify-around items-center">
-        <div className="logo flex justify-center items-center gap-6 ">
+        <div className="flex justify-center items-center gap-6 ">
           <img
             className="w-16 h-16 hidden sm:block rounded-full "
             src={imgsLogo}
