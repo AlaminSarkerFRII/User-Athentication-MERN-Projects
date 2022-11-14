@@ -1,27 +1,31 @@
 import React, { useEffect, useState } from "react";
 import AddWorkout from "../components/AddWorkout";
+import ContactUs from "../components/common/ContactUs";
 import Loading from "../components/common/Loading";
 import WorkoutDetails from "../components/WorkoutDetails";
 import Banner from "./Banner";
+import Pricing from "./Pricing";
+import Subscriber from "./Subscriber";
 
 const Home = () => {
   const [workouts, setWorkouts] = useState(null);
-  const [loading , setLoading] = useState(true)
-
-
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const url = "http://localhost:5000/api/workouts";
-
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setWorkouts(data.slice(0, 5));
-        setLoading(false)
+        setLoading(false);
       });
   }, []);
 
-  if(loading) return <Loading/>
+  // loading component load here
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="my-10 text-center">
@@ -33,6 +37,14 @@ const Home = () => {
             <WorkoutDetails key={workout._id} workout={workout} />
           ))}
       </div>
+
+      <Pricing />
+
+      <Subscriber />
+
+      {/* contact us  */}
+
+      <ContactUs />
     </div>
   );
 };
