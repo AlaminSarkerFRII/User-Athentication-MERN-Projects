@@ -8,6 +8,7 @@ import logo5 from "../assests/nettikasinot.png";
 
 const Partners = () => {
   const settings = {
+    loop: true,
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
@@ -40,11 +41,11 @@ const Partners = () => {
   ];
 
   return (
-    <div className="my-20 w-1/2 mx-auto overflow-hidden">
+    <div className="my-20 w-4/12 mx-auto overflow-hidden">
       <h2 className="text-4xl font-bold my-4">Our Client & Partners </h2>
       <Slider {...settings}>
         {images.map((image) => (
-          <div className="w-full mx-0 flex flex-row justify-center items-center">
+          <div className="w-1/2 mx-0 flex flex-row justify-center items-center">
             <img className="w-20 h-20 mx-auto" src={image.url} alt="partner" />
           </div>
         ))}
