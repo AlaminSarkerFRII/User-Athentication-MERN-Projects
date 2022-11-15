@@ -5,6 +5,7 @@ import Loading from "../components/common/Loading";
 import TopBanner from "../components/common/TopBanner";
 import WorkoutDetails from "../components/WorkoutDetails";
 import Banner from "./Banner";
+import Partners from "./Partners";
 import Pricing from "./Pricing";
 import Subscriber from "./Subscriber";
 import Teams from "./Teams";
@@ -46,6 +47,8 @@ const Home = () => {
       <Subscriber />
 
       <Teams />
+
+      <Partners/>
 
       {/* contact us  */}
 

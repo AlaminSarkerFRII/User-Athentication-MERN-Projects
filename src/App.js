@@ -11,6 +11,10 @@ import DetailsUser from "./components/Dashboard/DetailsUser";
 import Dashboard from "./components/Dashboard/Home";
 import Footer from "./components/Footer";
 
+//react slider
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   return (
     <>
@@ -28,7 +32,7 @@ function App() {
         <Route path="/details-user/:id" element={<DetailsUser />}></Route>
       </Routes>
       <ToastContainer position="top-center" />
-      <Footer/>
+      <Footer />
     </>
   );
 }
