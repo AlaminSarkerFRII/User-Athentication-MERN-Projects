@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AddWorkout from "../components/AddWorkout";
 import ContactUs from "../components/common/ContactUs";
 import Loading from "../components/common/Loading";
+import TopBanner from "../components/common/TopBanner";
 import WorkoutDetails from "../components/WorkoutDetails";
 import Banner from "./Banner";
 import Pricing from "./Pricing";
@@ -29,6 +30,7 @@ const Home = () => {
 
   return (
     <div className="my-10 text-center">
+      <TopBanner />
       <Banner />
       {/* <Loading/> */}
       <div className="flex flex-col lg:flex-row flex-wrap gap-10 sm:w-full justify-center items-center bg-zinc-100 mx-auto py-3">
