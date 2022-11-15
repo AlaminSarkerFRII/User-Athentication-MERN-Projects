@@ -6,7 +6,10 @@ import user3 from "../assests/user-3.jpg";
 const Teams = () => {
   return (
     <div class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
+      <div class="container px-5 py-24 mx-auto ">
+        <h2 className="text-4xl w-[50%] mx-auto my-10 text-center font-bold before:border-x-2 after:border-x-2 before:border-blue-500 after:border-blue-500">
+          Meet Our Teams
+        </h2>
         <div class="flex flex-wrap -m-4">
           <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div class="h-full text-center">
