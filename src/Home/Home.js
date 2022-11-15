@@ -7,6 +7,7 @@ import WorkoutDetails from "../components/WorkoutDetails";
 import Banner from "./Banner";
 import Pricing from "./Pricing";
 import Subscriber from "./Subscriber";
+import Teams from "./Teams";
 
 const Home = () => {
   const [workouts, setWorkouts] = useState(null);
@@ -43,6 +44,8 @@ const Home = () => {
       <Pricing />
 
       <Subscriber />
+
+      <Teams />
 
       {/* contact us  */}
 

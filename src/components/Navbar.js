@@ -80,7 +80,7 @@ const Navbar = () => {
             Dashboard
           </Link>
         </div>
-        <div className="sign-in flex flex-shrink-0 flex-col lg:flex-row justify-center items-center">
+        <div className="sign-in flex flex-shrink-0 gap-4 flex-col lg:flex-row justify-center items-center">
           <Link
             to="/login"
             className="border-2 px-4 py-1 rounded-md bg-red-500 hover:bg-teal-500 text-white "
